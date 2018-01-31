@@ -2,27 +2,60 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+body {
+  background: rgba(241, 231, 103, 1);
+  background: -moz-linear-gradient(
+    left,
+    rgba(241, 231, 103, 1) 0%,
+    rgba(252, 70, 143, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, rgba(241, 231, 103, 1)),
+    color-stop(100%, rgba(252, 70, 143, 1))
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgba(241, 231, 103, 1) 0%,
+    rgba(252, 70, 143, 1) 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(241, 231, 103, 1) 0%,
+    rgba(252, 70, 143, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    left,
+    rgba(241, 231, 103, 1) 0%,
+    rgba(252, 70, 143, 1) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(241, 231, 103, 1) 0%,
+    rgba(252, 70, 143, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(
+      startColorstr="#f1e767",
+      endColorstr="#fc468f",
+      GradientType=1
+    );
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
+.particles {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

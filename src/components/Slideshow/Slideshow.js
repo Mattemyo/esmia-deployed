@@ -14,37 +14,37 @@ import norbertoPaellas from "./images/norbertoPaellas.JPG";
 import paellaSmiley from "./images/paellaSmiley.jpg";
 import tapasJamon from "./images/tapasJamon.jpg";
 
-const Slideshow = () => {
-  const images = [
-    buffe,
-    cerdoToledo,
-    GotebTapas,
-    GotebTapasQueso,
-    GotebTapasQueso2,
-    GotebTapasQuesoMembrillo,
-    maricoPaella2,
-    mariscoPaella,
-    norbertoGambas,
-    norbertoPaellas,
-    paellaSmiley,
-    tapasJamon
-  ];
+const images = [
+  buffe,
+  cerdoToledo,
+  GotebTapas,
+  GotebTapasQueso,
+  GotebTapasQueso2,
+  GotebTapasQuesoMembrillo,
+  maricoPaella2,
+  mariscoPaella,
+  norbertoGambas,
+  norbertoPaellas,
+  paellaSmiley,
+  tapasJamon
+];
 
-  const listedImages = images.map((image, i) => {
-    const animationLength = 8;
-    const liStyle = {
-      animation: `imageAnimation ${animationLength *
-        images.length}s linear infinite`,
-      animationDelay: `${i * animationLength}s`
-    };
+const listedImages = images.map((image, i) => {
+  const animationLength = 8;
+  const liStyle = {
+    animation: `imageAnimation ${animationLength *
+      images.length}s linear infinite`,
+    animationDelay: `${i * animationLength}s`
+  };
 
-    return (
-      <li style={liStyle} key={image}>
-        <img src={image} />
-      </li>
-    );
-  });
+  return (
+    <li style={liStyle} key={image}>
+      <img src={image} />
+    </li>
+  );
+});
 
+const Slideshow = ({ onRouteChange }) => {
   return (
     <div>
       <div id="landing-header">
@@ -53,6 +53,7 @@ const Slideshow = () => {
       <ul className="slideshow">{listedImages}</ul>
       <div className="w-20">
         <a
+          onClick={() => onRouteChange("product")}
           className="w-20 grow f4 link ph3 pv2 dib white bg-light-purple"
           href="#0"
         >
