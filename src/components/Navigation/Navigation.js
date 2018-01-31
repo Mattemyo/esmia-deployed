@@ -1,6 +1,8 @@
 import React from "react";
 import "./Navigation.css";
 
+// TODO: ADD TIMESTAMP
+
 const Navigation = ({ onRouteChange }) => {
   return (
     <nav style={{ display: "flex", justifyContent: "flex-end" }}>

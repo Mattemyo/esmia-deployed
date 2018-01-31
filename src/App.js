@@ -57,7 +57,11 @@ class App extends Component {
     return (
       <div className="App">
         <Particles className="particles" params={particlesOptions} />
-        {route !== "landing" ? <Navigation /> : console.log('not landing')}
+        {route !== "landing" ? (
+          <Navigation onRouteChange={this.onRouteChange} />
+        ) : (
+          console.log("not landing")
+        )}
         {renderSwitch(route)}
       </div>
     );
