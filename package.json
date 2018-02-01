@@ -8,7 +8,9 @@
     "react-dom": "^16.2.0",
     "react-particles-js": "^2.1.0",
     "react-scripts": "1.1.0",
+    "react-slick": "^0.17.1",
     "react-tilt": "^0.1.4",
+    "slick-carousel": "^1.8.1",
     "tachyons": "^4.9.1"
   },
   "scripts": {

@@ -1,51 +1,49 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto");
-
-.App {
-  text-align: center;
-}
-h1 {
-  text-shadow: 2px 2px 2px #000;  
-}
+@import url("https://fonts.googleapis.com/css?family=Lato");
 
 body {
-  font-family: "Roboto", sans-serif;
-  background: rgba(241, 231, 103, 1);
+  line-height: 2;
+  font-family: "Lato", sans-serif;
+  background: rgb(243, 243, 44);
   background: -moz-linear-gradient(
     left,
-    rgba(241, 231, 103, 1) 0%,
-    rgba(252, 70, 143, 1) 100%
+    rgb(245, 245, 36) 0%,
+    rgb(209, 32, 32) 100%
   );
   background: -webkit-gradient(
     left top,
     right top,
-    color-stop(0%, rgba(241, 231, 103, 1)),
-    color-stop(100%, rgba(252, 70, 143, 1))
+    color-stop(0%, rgb(245, 245, 36)),
+    color-stop(100%, rgb(209, 32, 32))
   );
   background: -webkit-linear-gradient(
     left,
-    rgba(241, 231, 103, 1) 0%,
-    rgba(252, 70, 143, 1) 100%
+    rgb(245, 245, 36) 0%,
+    rgb(209, 32, 32) 100%
   );
   background: -o-linear-gradient(
     left,
-    rgba(241, 231, 103, 1) 0%,
-    rgba(252, 70, 143, 1) 100%
+    rgb(245, 245, 36) 0%,
+    rgb(209, 32, 32) 100%
   );
   background: -ms-linear-gradient(
     left,
-    rgba(241, 231, 103, 1) 0%,
-    rgba(252, 70, 143, 1) 100%
+    rgb(245, 245, 36) 0%,
+    rgb(209, 32, 32) 100%
   );
   background: linear-gradient(
     to right,
-    rgba(241, 231, 103, 1) 0%,
-    rgba(252, 70, 143, 1) 100%
+    rgb(245, 245, 36) 0%,
+    rgb(209, 32, 32) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(
       startColorstr="#f1e767",
       endColorstr="#fc468f",
       GradientType=1
     );
+}
+
+p {
+  padding: 5px;
 }
 
 .particles {

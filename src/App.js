@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Particles from "react-particles-js";
+import Welcome from "./components/Welcome/Welcome";
 import Slideshow from "./components/Slideshow/Slideshow";
 import Navigation from "./components/Navigation/Navigation";
 import Contact from "./components/Contact/Contact";
@@ -17,6 +18,9 @@ const particlesOptions = {
           value_area: 800
         }
       }
+    },
+    size: {
+      value: 12
     }
   }
 };
@@ -38,7 +42,7 @@ class App extends Component {
     const renderSwitch = route => {
       switch (route) {
         case "landing":
-          return <Slideshow onRouteChange={this.onRouteChange} />;
+          return <Product />;
           break;
         case "product":
           return <Product onRouteChange={this.onRouteChange} />;
@@ -57,11 +61,8 @@ class App extends Component {
     return (
       <div className="App">
         <Particles className="particles" params={particlesOptions} />
-        {route !== "landing" ? (
-          <Navigation onRouteChange={this.onRouteChange} />
-        ) : (
-          console.log("not landing")
-        )}
+        <Navigation onRouteChange={this.onRouteChange} />
+        {route === "landing" ? <Welcome /> : console.log("not landing")}
         {renderSwitch(route)}
       </div>
     );
