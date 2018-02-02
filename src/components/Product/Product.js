@@ -1,24 +1,132 @@
 import React from "react";
 import "./Product.css";
 
-const Product = ({ onRouteChange }) => {
-  return (
-    <div className="br3 ba dark-gray b--black-10 mv4 w-80 w-80-m w-50-1 shadow-5 center">
-      <div className="br4 left w-20">
-        <img
-          className="br6 pa3"
-          src="http://static.webshopapp.com/shops/001679/files/001855872/jamon-serrano-ursprunglig-spansk-lufttorkad-skinka.jpg"
-          alt="serrano"
-        />
-      </div>
-      <div className="right w-80">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique
-        quisquam repellendus quam, incidunt assumenda exercitationem aperiam
-        commodi necessitatibus dolorum consequatur numquam maxime esse
-        laboriosam eos officia iure id voluptatum adipisci.
-      </div>
-    </div>
-  );
+const allProducts = {
+  Skinkor: [
+    {
+      name: "Serrano",
+      imgUrl:
+        "http://static.webshopapp.com/shops/001679/files/001855872/jamon-serrano-ursprunglig-spansk-lufttorkad-skinka.jpg"
+    },
+    {
+      name: "Iberico",
+      imgUrl:
+        "https://thumbs.dreamstime.com/z/tapas-iberico-skinka-och-lomokorv-spanien-66456346.jpg"
+    }
+  ],
+  Chorizo: [
+    {
+      name: "Serrano",
+      imgUrl:
+        "http://static.webshopapp.com/shops/001679/files/001855872/jamon-serrano-ursprunglig-spansk-lufttorkad-skinka.jpg"
+    },
+    {
+      name: "Iberico",
+      imgUrl:
+        "https://thumbs.dreamstime.com/z/tapas-iberico-skinka-och-lomokorv-spanien-66456346.jpg"
+    }
+  ],
+  Ostar: [
+    {
+      name: "Serrano",
+      imgUrl:
+        "http://static.webshopapp.com/shops/001679/files/001855872/jamon-serrano-ursprunglig-spansk-lufttorkad-skinka.jpg"
+    },
+    {
+      name: "Iberico",
+      imgUrl:
+        "https://thumbs.dreamstime.com/z/tapas-iberico-skinka-och-lomokorv-spanien-66456346.jpg"
+    }
+  ],
+  Kolonial: [
+    {
+      name: "Serrano",
+      imgUrl:
+        "http://static.webshopapp.com/shops/001679/files/001855872/jamon-serrano-ursprunglig-spansk-lufttorkad-skinka.jpg"
+    },
+    {
+      name: "Iberico",
+      imgUrl:
+        "https://thumbs.dreamstime.com/z/tapas-iberico-skinka-och-lomokorv-spanien-66456346.jpg"
+    }
+  ]
 };
+
+const productTypes = ["Skinkor", "Chorizo", "Ostar", "Kolonial"];
+
+class Product extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeList: "Skinkor"
+    };
+  }
+
+  //Decide which list to show
+  onListChange = list => {
+    this.setState({
+      activeList: list
+    });
+  };
+
+  // Rendered on page
+  render() {
+    // Choose which type of product will be shown
+    const subNav = productTypes.map(productType => {
+      return (
+        <p
+          style={{ fontSize: "30px" }}
+          onClick={() => this.onListChange(productType)}
+          className="center f3 link dim black pa3 pointer ba b--black-10 br2 shadow-5"
+        >
+          {productType}
+        </p>
+      );
+    });
+
+    // Rendered list depends on the which list is active
+    const listedProducts = allProducts[this.state.activeList].map(listedProduct => {
+      return (
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "flex-end"
+          }}
+          className="br3 pl6 ba dark-gray b--black-10 mv4 w-80 w-80-m w-50-1 shadow-5 center"
+        >
+          <div className="br4 left w-20">
+            <h3 className="tc">{listedProduct.name}</h3>
+            <img
+              className="br6"
+              src={listedProduct.source}
+              alt={listedProduct.name}
+            />
+          </div>
+          <div className="right w-80 pa6">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Similique quisquam repellendus quam, incidunt assumenda
+              exercitationem aperiam commodi necessitatibus dolorum consequatur
+              numquam maxime esse laboriosam eos officia iure id voluptatum
+              adipisci.
+            </p>
+          </div>
+        </div>
+      );
+    });
+
+    return (
+      <div className="products w-100">
+        <div
+          style={{ display: "flex", justifyContent: "flex-end" }}
+          className="product-nav br3 pa2 ba dark-gray b--black-10 mv4 w-80 w-80-m w-50-1 shadow-5 center"
+        >
+          {subNav}
+        </div>
+        <div>{allProducts}</div>
+      </div>
+    );
+  }
+}
 
 export default Product;
