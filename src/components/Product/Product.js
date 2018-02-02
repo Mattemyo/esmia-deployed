@@ -16,36 +16,36 @@ const allProducts = {
   ],
   Chorizo: [
     {
-      name: "Serrano",
+      name: "Korv",
       imgUrl:
         "http://static.webshopapp.com/shops/001679/files/001855872/jamon-serrano-ursprunglig-spansk-lufttorkad-skinka.jpg"
     },
     {
-      name: "Iberico",
+      name: "Mer korv",
       imgUrl:
         "https://thumbs.dreamstime.com/z/tapas-iberico-skinka-och-lomokorv-spanien-66456346.jpg"
     }
   ],
   Ostar: [
     {
-      name: "Serrano",
+      name: "Ostis",
       imgUrl:
         "http://static.webshopapp.com/shops/001679/files/001855872/jamon-serrano-ursprunglig-spansk-lufttorkad-skinka.jpg"
     },
     {
-      name: "Iberico",
+      name: "Mer ostis",
       imgUrl:
         "https://thumbs.dreamstime.com/z/tapas-iberico-skinka-och-lomokorv-spanien-66456346.jpg"
     }
   ],
   Kolonial: [
     {
-      name: "Serrano",
+      name: "kolonn",
       imgUrl:
         "http://static.webshopapp.com/shops/001679/files/001855872/jamon-serrano-ursprunglig-spansk-lufttorkad-skinka.jpg"
     },
     {
-      name: "Iberico",
+      name: "mer kolonn",
       imgUrl:
         "https://thumbs.dreamstime.com/z/tapas-iberico-skinka-och-lomokorv-spanien-66456346.jpg"
     }
@@ -85,35 +85,37 @@ class Product extends React.Component {
     });
 
     // Rendered list depends on the which list is active
-    const listedProducts = allProducts[this.state.activeList].map(listedProduct => {
-      return (
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "flex-end"
-          }}
-          className="br3 pl6 ba dark-gray b--black-10 mv4 w-80 w-80-m w-50-1 shadow-5 center"
-        >
-          <div className="br4 left w-20">
-            <h3 className="tc">{listedProduct.name}</h3>
-            <img
-              className="br6"
-              src={listedProduct.source}
-              alt={listedProduct.name}
-            />
+    const listedProducts = allProducts[this.state.activeList].map(
+      listedProduct => {
+        return (
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "flex-end"
+            }}
+            className="br3 pl6 ba dark-gray b--black-10 mv4 w-80 w-80-m w-50-1 shadow-5 center"
+          >
+            <div className="br4 left w-20">
+              <h3 className="tc">{listedProduct.name}</h3>
+              <img
+                className="br6"
+                src={listedProduct.imgUrl}
+                alt={listedProduct.name}
+              />
+            </div>
+            <div className="right w-80 pa6">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Similique quisquam repellendus quam, incidunt assumenda
+                exercitationem aperiam commodi necessitatibus dolorum
+                consequatur numquam maxime esse laboriosam eos officia iure id
+                voluptatum adipisci.
+              </p>
+            </div>
           </div>
-          <div className="right w-80 pa6">
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Similique quisquam repellendus quam, incidunt assumenda
-              exercitationem aperiam commodi necessitatibus dolorum consequatur
-              numquam maxime esse laboriosam eos officia iure id voluptatum
-              adipisci.
-            </p>
-          </div>
-        </div>
-      );
-    });
+        );
+      }
+    );
 
     return (
       <div className="products w-100">
@@ -123,7 +125,7 @@ class Product extends React.Component {
         >
           {subNav}
         </div>
-        <div>{allProducts}</div>
+        <div>{listedProducts}</div>
       </div>
     );
   }
