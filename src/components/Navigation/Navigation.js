@@ -5,7 +5,7 @@ import "./Navigation.css";
 
 const Navigation = ({ onRouteChange }) => {
   return (
-    <nav style={{ display: "flex", justifyContent: "flex-end" }}>
+    <nav className="mv0" style={{ display: "flex", justifyContent: "flex-end" }}>
       <p
         onClick={() => onRouteChange("product")}
         className="f3 link dim black underline pa3 pointer"

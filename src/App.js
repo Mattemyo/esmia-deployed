@@ -6,10 +6,14 @@ import Navigation from "./components/Navigation/Navigation";
 import Contact from "./components/Contact/Contact";
 import Info from "./components/Info/Info";
 import Product from "./components/Product/Product";
+
 import "./App.css";
 
 const particlesOptions = {
   particles: {
+    number: {
+      value: 20
+    },
     line_linked: {
       number: {
         value: 30,
@@ -21,6 +25,9 @@ const particlesOptions = {
     },
     size: {
       value: 12
+    },
+    move: {
+      speed: 2
     }
   }
 };
