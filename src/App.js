@@ -6,6 +6,7 @@ import Navigation from "./components/Navigation/Navigation";
 import Contact from "./components/Contact/Contact";
 import Info from "./components/Info/Info";
 import Product from "./components/Product/Product";
+import Footer from "./components/Footer/Footer";
 
 import "./App.css";
 
@@ -71,6 +72,7 @@ class App extends Component {
         <Navigation onRouteChange={this.onRouteChange} />
         {route === "landing" ? <Welcome /> : console.log("not landing")}
         {renderSwitch(route)}
+        <Footer />
       </div>
     );
   }
