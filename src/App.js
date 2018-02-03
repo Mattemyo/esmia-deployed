@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Particles from "react-particles-js";
 import Welcome from "./components/Welcome/Welcome";
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import Slideshow from "./components/Slideshow/Slideshow";
 import Navigation from "./components/Navigation/Navigation";
 import Contact from "./components/Contact/Contact";
@@ -50,16 +51,16 @@ class App extends Component {
     const renderSwitch = route => {
       switch (route) {
         case "landing":
-          return <Product />;
+          return <Product key={route} />;
           break;
         case "product":
-          return <Product onRouteChange={this.onRouteChange} />;
+          return <Product key="product" onRouteChange={this.onRouteChange} />;
           break;
         case "info":
-          return <Info onRouteChange={this.onRouteChange} />;
+          return <Info key={route} onRouteChange={this.onRouteChange} />;
           break;
         case "contact":
-          return <Contact onRouteChange={this.onRouteChange} />;
+          return <Contact key={route} onRouteChange={this.onRouteChange} />;
           break;
         default:
           break;
@@ -71,7 +72,15 @@ class App extends Component {
         <Particles className="particles" params={particlesOptions} />
         <Navigation onRouteChange={this.onRouteChange} />
         {route === "landing" ? <Welcome /> : console.log("not landing")}
-        {renderSwitch(route)}
+        {/* Transition Routes */}
+        <ReactCSSTransitionGroup
+          className="route-transition absolute dt w-100"
+          transitionName="ProductTransition"
+          transitionEnterTimeout={200}
+          transitionLeaveTimeout={200}
+        >
+          {renderSwitch(route)}
+        </ReactCSSTransitionGroup>
         <Footer />
       </div>
     );

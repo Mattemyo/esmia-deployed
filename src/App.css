@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Lato");
 
 body {
+  min-height: 105vh;
   line-height: 1.5;
   font-family: "Lato", sans-serif;
   background: rgb(245, 113, 36);
@@ -71,6 +72,27 @@ p {
   left: 0;
   z-index: -1;
 }
+
+
+.ProductTransition-enter {
+  opacity: 0.01;
+}
+
+.ProductTransition-enter.ProductTransition-enter-active {
+  opacity: 1;
+  transition: all 0.2s ease-in;
+}
+
+
+.ProductTransition-leave {
+  opacity: 0;
+  
+}
+
+.ProductTransition-leave.ProductTransition-leave-active {
+  opacity: 0.01;
+  transition: all 0.2s linear;
+} 
 
 @keyframes App-logo-spin {
   from {

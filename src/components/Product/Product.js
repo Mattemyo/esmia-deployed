@@ -1,6 +1,9 @@
 import React from "react";
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+
 import "./Product.css";
 
+// List of all products
 const allProducts = {
   Skinkor: [
     {
@@ -62,6 +65,7 @@ const allProducts = {
   ]
 };
 
+//Types of products
 const productTypes = ["Skinkor", "Chorizo", "Ostar", "Kolonial"];
 
 class Product extends React.Component {
@@ -98,7 +102,10 @@ class Product extends React.Component {
     const listedProducts = allProducts[this.state.activeList].map(
       listedProduct => {
         return (
-          <div className="flex flex-wrap br3 pa2 ba dark-gray b--black-10 mv4 w-80 w-100-m w-50-1 shadow-5 center">
+          <div
+            key={listedProduct.name}
+            className="flex flex-wrap br3 pa2 ba dark-gray b--black-10 mv4 w-80 w-100-m w-50-1 shadow-5 center"
+          >
             <div className="center w-100-m w-20">
               <h3 className="tc">{listedProduct.name}</h3>
               <img
@@ -121,14 +128,23 @@ class Product extends React.Component {
       }
     );
 
-    return <div className="products w-100">
+    return (
+      <div className="absolute products w-100">
         <div className="flex flex-wrap product-nav br3 pa2 ba dark-gray b--black-10 mt2 mb4 w-80 w-80-m w-50-1 shadow-5 center">
           {subNav}
         </div>
-        <div style={{ overflowY: "scroll", height: '400px'}}>
-          {listedProducts}
+        <div style={{ overflowY: "scroll", height: "400px" }}>
+          <ReactCSSTransitionGroup
+            className="relative"
+            transitionName="ListTransition"
+            transitionEnterTimeout={1000}
+            transitionLeaveTimeout={1000}
+          >
+            {listedProducts}
+          </ReactCSSTransitionGroup>
         </div>
-      </div>;
+      </div>
+    );
   }
 }
 

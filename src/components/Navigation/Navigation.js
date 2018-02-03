@@ -7,7 +7,7 @@ const Navigation = ({ onRouteChange }) => {
   return (
     <nav
       className="mv0"
-      style={{ display: "flex", justifyContent: "flex-end" }}
+      style={{ width:'100vw', display: "flex", justifyContent: "flex-end" }}
     >
       <p
         onClick={() => onRouteChange("product")}

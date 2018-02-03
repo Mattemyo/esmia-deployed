@@ -5,3 +5,24 @@ h3 {
 .product-nav p {
   background: rgba(0, 0, 0, 0.2);
 }
+
+
+
+/* Product List */
+.ListTransition-enter {
+  opacity: 0.01;
+}
+
+.ListTransition-enter.ListTransition-enter-active {
+  opacity: 1;
+  transition: all 1s ease;
+}
+
+.ListTransition-leave {
+  opacity: 1;
+}
+
+.ListTransition-leave.ListTransition-leave-active {
+  opacity: 0.01;
+  transition: all 1s ease;
+}

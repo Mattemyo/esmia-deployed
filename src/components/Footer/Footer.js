@@ -5,9 +5,9 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer className="pl4 pb0 mb0">
+    <footer className="pr4 tr">
       <h6>
-        Website made by
+        Website made by{" "}
         <a
           href="https://www.linkedin.com/in/matias-marti-433087156/"
           target="_blank"
