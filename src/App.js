@@ -33,7 +33,6 @@ const particlesOptions = {
     }
   }
 };
-
 class App extends Component {
   constructor() {
     super();
@@ -68,7 +67,7 @@ class App extends Component {
     };
 
     return (
-      <div className="App">
+      <div className="App w-100">
         <Particles className="particles" params={particlesOptions} />
         <Navigation onRouteChange={this.onRouteChange} />
         {route === "landing" ? <Welcome /> : console.log("not landing")}

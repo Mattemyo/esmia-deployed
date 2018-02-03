@@ -6,8 +6,6 @@ h3 {
   background: rgba(0, 0, 0, 0.2);
 }
 
-
-
 /* Product List */
 .ListTransition-enter {
   opacity: 0.01;
@@ -15,7 +13,7 @@ h3 {
 
 .ListTransition-enter.ListTransition-enter-active {
   opacity: 1;
-  transition: all 1s ease;
+  transition: all 0.2s ease;
 }
 
 .ListTransition-leave {
@@ -24,5 +22,31 @@ h3 {
 
 .ListTransition-leave.ListTransition-leave-active {
   opacity: 0.01;
-  transition: all 1s ease;
+  transition: all 0.2s ease;
+}
+
+/* Scrollbar */
+.list-container::-webkit-scrollbar {
+  width: 4em;
+  margin-bottom: 40px;
+}
+.list-container::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.list-container::-webkit-scrollbar-thumb {
+  width: 8em;
+  background: black;
+  height: 60px;
+  background: red;
+  -webkit-border-radius: 5px;
+
+}
+.list-container::-webkit-scrollbar-button {
+  height: 60px;
+  border-bottom: 30px solid transparent;
+  border-top: 30px solid transparent;
+  border-right: 70px solid black;
+  background: red;
+  -webkit-border-radius: 5px;
 }

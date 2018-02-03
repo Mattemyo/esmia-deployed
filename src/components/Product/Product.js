@@ -104,7 +104,7 @@ class Product extends React.Component {
         return (
           <div
             key={listedProduct.name}
-            className="flex flex-wrap br3 pa2 ba dark-gray b--black-10 mv4 w-80 w-100-m w-50-1 shadow-5 center"
+            className="flex flex-wrap br3 pa2 ba dark-gray b--black-10 mv4 shadow-5 center"
           >
             <div className="center w-100-m w-20">
               <h3 className="tc">{listedProduct.name}</h3>
@@ -133,12 +133,14 @@ class Product extends React.Component {
         <div className="flex flex-wrap product-nav br3 pa2 ba dark-gray b--black-10 mt2 mb4 w-80 w-80-m w-50-1 shadow-5 center">
           {subNav}
         </div>
-        <div style={{ overflowY: "scroll", height: "400px" }}>
+        <div
+          className="list-container w-80 w-100-m center"
+          style={{ overflowY: "scroll", height: "400px" }}
+        >
           <ReactCSSTransitionGroup
-            className="relative"
             transitionName="ListTransition"
-            transitionEnterTimeout={1000}
-            transitionLeaveTimeout={1000}
+            transitionEnterTimeout={200}
+            transitionLeaveTimeout={200}
           >
             {listedProducts}
           </ReactCSSTransitionGroup>
