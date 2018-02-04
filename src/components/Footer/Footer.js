@@ -6,7 +6,7 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <footer className="pr4 tr">
-      <h6>
+      <h4>
         Website made by{" "}
         <a
           href="https://www.linkedin.com/in/matias-marti-433087156/"
@@ -14,7 +14,7 @@ const Footer = () => {
         >
           Matias Marti
         </a>
-      </h6>
+      </h4>
     </footer>
   );
 };

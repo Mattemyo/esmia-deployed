@@ -1,72 +1,23 @@
 import React from "react";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
-
+import Skinkor from "./Skinkor";
+import Chorizos from "./Chorizos";
+import Kolonial from "./Kolonial";
+import Paellor from "./Paellor";
+import Ostar from "./Ostar";
 import "./Product.css";
 
 // List of all products
 const allProducts = {
-  Skinkor: [
-    {
-      name: "Serrano",
-      imgUrl:
-        "http://static.webshopapp.com/shops/001679/files/001855872/jamon-serrano-ursprunglig-spansk-lufttorkad-skinka.jpg"
-    },
-    {
-      name: "Iberico",
-      imgUrl:
-        "https://thumbs.dreamstime.com/z/tapas-iberico-skinka-och-lomokorv-spanien-66456346.jpg"
-    },
-    {
-      name: "Iberico",
-      imgUrl:
-        "https://thumbs.dreamstime.com/z/tapas-iberico-skinka-och-lomokorv-spanien-66456346.jpg"
-    },
-    {
-      name: "Iberico",
-      imgUrl:
-        "https://thumbs.dreamstime.com/z/tapas-iberico-skinka-och-lomokorv-spanien-66456346.jpg"
-    }
-  ],
-  Chorizo: [
-    {
-      name: "Korv",
-      imgUrl:
-        "http://static.webshopapp.com/shops/001679/files/001855872/jamon-serrano-ursprunglig-spansk-lufttorkad-skinka.jpg"
-    },
-    {
-      name: "Mer korv",
-      imgUrl:
-        "https://thumbs.dreamstime.com/z/tapas-iberico-skinka-och-lomokorv-spanien-66456346.jpg"
-    }
-  ],
-  Ostar: [
-    {
-      name: "Ostis",
-      imgUrl:
-        "http://static.webshopapp.com/shops/001679/files/001855872/jamon-serrano-ursprunglig-spansk-lufttorkad-skinka.jpg"
-    },
-    {
-      name: "Mer ostis",
-      imgUrl:
-        "https://thumbs.dreamstime.com/z/tapas-iberico-skinka-och-lomokorv-spanien-66456346.jpg"
-    }
-  ],
-  Kolonial: [
-    {
-      name: "kolonn",
-      imgUrl:
-        "http://static.webshopapp.com/shops/001679/files/001855872/jamon-serrano-ursprunglig-spansk-lufttorkad-skinka.jpg"
-    },
-    {
-      name: "mer kolonn",
-      imgUrl:
-        "https://thumbs.dreamstime.com/z/tapas-iberico-skinka-och-lomokorv-spanien-66456346.jpg"
-    }
-  ]
+  Skinkor,
+  Chorizos,
+  Kolonial,
+  Paellor,
+  Ostar
 };
 
 //Types of products
-const productTypes = ["Skinkor", "Chorizo", "Ostar", "Kolonial"];
+const productTypes = ["Skinkor", "Chorizos", "Ostar", "Kolonial", "Paellor"];
 
 class Product extends React.Component {
   constructor(props) {
@@ -77,9 +28,9 @@ class Product extends React.Component {
   }
 
   //Decide which list to show
-  onListChange = list => {
+  onListChange = productType => {
     this.setState({
-      activeList: list
+      activeList: productType
     });
   };
 
@@ -89,9 +40,9 @@ class Product extends React.Component {
     const subNav = productTypes.map(productType => {
       return (
         <p
-          style={{ fontSize: "30px" }}
+          style={{ fontSize: "2rem" }}
           onClick={() => this.onListChange(productType)}
-          className="mv1 center tc w-40-m w-20 f3 link dim black pa2 pointer ba b--black-10 br2 shadow-5"
+          className="mv1 center tc w-40-m w-19 f3 link dim black pa2 pointer ba b--black-10 br2 shadow-5"
         >
           {productType}
         </p>
@@ -115,13 +66,8 @@ class Product extends React.Component {
               />
             </div>
             <div className="center w-100-m w-60 pa2">
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Similique quisquam repellendus quam, incidunt assumenda
-                exercitationem aperiam commodi necessitatibus dolorum
-                consequatur numquam maxime esse laboriosam eos officia iure id
-                voluptatum adipisci.
-              </p>
+              <p>{listedProduct.description}</p>
+              <h2>Pris: {listedProduct.price}</h2>
             </div>
           </div>
         );
