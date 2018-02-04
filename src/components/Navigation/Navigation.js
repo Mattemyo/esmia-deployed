@@ -6,8 +6,8 @@ import "./Navigation.css";
 const Navigation = ({ onRouteChange }) => {
   return (
     <nav
-      className="mv0"
-      style={{ width:'100vw', display: "flex", justifyContent: "flex-end" }}
+      className="center w-80-l"
+      style={{ display: "flex", justifyContent: 'flex-end' }}
     >
       <p
         onClick={() => onRouteChange("product")}
@@ -22,8 +22,9 @@ const Navigation = ({ onRouteChange }) => {
         Om oss
       </p>
       <p
+        className="relative"
         onClick={() => onRouteChange("contact")}
-        className="f3 link dim black underline pa3 pointer mr5"
+        className="f3 link dim black underline pa3 pointer"
       >
         Kontakt
       </p>

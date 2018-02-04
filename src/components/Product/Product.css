@@ -38,15 +38,28 @@ h3 {
   width: 8em;
   background: black;
   height: 60px;
-  background: red;
+  background-color: rgb(252, 104, 35);
   -webkit-border-radius: 5px;
-
 }
 .list-container::-webkit-scrollbar-button {
   height: 60px;
   border-bottom: 30px solid transparent;
   border-top: 30px solid transparent;
   border-right: 70px solid black;
-  background: red;
+  background-color: rgb(252, 104, 35);
   -webkit-border-radius: 5px;
+}
+
+@media (max-width: 900px) {
+  .list-container::-webkit-scrollbar-thumb {
+    width: 1em;
+    background: black;
+    height: 60px;
+    background-color: rgb(252, 104, 35);
+    -webkit-border-radius: 5px;
+  }
+  .list-container::-webkit-scrollbar {
+    width: 1em;
+    margin-bottom: 40px;
+  }
 }

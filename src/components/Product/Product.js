@@ -38,11 +38,18 @@ class Product extends React.Component {
   render() {
     // Choose which type of product will be shown
     const subNav = productTypes.map(productType => {
+      let activeStyle;
+      if (this.state.activeList === productType) {
+        activeStyle = {
+          boxShadow: "2px 2px white"
+        };
+      }
+
       return (
         <p
-          style={{ fontSize: "2rem" }}
+          style={activeStyle}
           onClick={() => this.onListChange(productType)}
-          className="mv1 center tc w-40-m w-19 f3 link dim black pa2 pointer ba b--black-10 br2 shadow-5"
+          className="f2 mv1 ph2 center tc w-40-m w-15 link dim black pa1 pointer ba b--black-10 br2 shadow-5"
         >
           {productType}
         </p>
@@ -55,17 +62,17 @@ class Product extends React.Component {
         return (
           <div
             key={listedProduct.name}
-            className="flex flex-wrap br3 pa2 ba dark-gray b--black-10 mv4 shadow-5 center"
+            className="pa3 mv4 flex flex-wrap br3 ba dark-gray b--black-10 shadow-5 center"
           >
-            <div className="center w-100-m w-20">
+            <div className="w-100 w-20-l">
               <h3 className="tc">{listedProduct.name}</h3>
               <img
-                className="br6 w-100"
+                className="center"
                 src={listedProduct.imgUrl}
                 alt={listedProduct.name}
               />
             </div>
-            <div className="center w-100-m w-60 pa2">
+            <div className="w-100 w-80-l f3 pl4">
               <p>{listedProduct.description}</p>
               <h2>Pris: {listedProduct.price}</h2>
             </div>
@@ -80,7 +87,7 @@ class Product extends React.Component {
           {subNav}
         </div>
         <div
-          className="list-container w-80 w-100-m center"
+          className="mb4 list-container w-100 w-80-ns center"
           style={{ overflowY: "scroll", height: "400px" }}
         >
           <ReactCSSTransitionGroup

@@ -5,7 +5,7 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer className="pr4 tr">
+    <footer className="ml4 tr">
       <h4>
         Website made by{" "}
         <a
