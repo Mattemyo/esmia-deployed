@@ -41,7 +41,7 @@ class Product extends React.Component {
       let activeStyle;
       if (this.state.activeList === productType) {
         activeStyle = {
-          boxShadow: "2px 2px white"
+          boxShadow: "2px 2px black"
         };
       }
 
