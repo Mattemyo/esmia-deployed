@@ -1,3 +1,6 @@
+
+
+
 import React, { Component } from "react";
 import Particles from "react-particles-js";
 import Welcome from "./components/Welcome/Welcome";
@@ -10,6 +13,7 @@ import Product from "./components/Product/Product";
 import Footer from "./components/Footer/Footer";
 
 import "./App.css";
+
 
 const particlesOptions = {
   particles: {

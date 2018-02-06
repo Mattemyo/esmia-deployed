@@ -3,21 +3,24 @@ import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import Skinkor from "./Skinkor";
 import Chorizos from "./Chorizos";
 import Kolonial from "./Kolonial";
-import Paellor from "./Paellor";
+import Paella from "./Paella";
 import Ostar from "./Ostar";
 import "./Product.css";
+
+
+
 
 // List of all products
 const allProducts = {
   Skinkor,
   Chorizos,
   Kolonial,
-  Paellor,
+  Paella,
   Ostar
 };
 
 //Types of products
-const productTypes = ["Skinkor", "Chorizos", "Ostar", "Kolonial", "Paellor"];
+const productTypes = ["Skinkor", "Chorizos", "Ostar", "Kolonial", "Paella"];
 
 class Product extends React.Component {
   constructor(props) {
@@ -67,14 +70,15 @@ class Product extends React.Component {
             <div className="w-100 w-20-l">
               <h3 className="tc">{listedProduct.name}</h3>
               <img
-                className="center"
-                src={listedProduct.imgUrl}
+                className="center br3"
+                src={listedProduct.img}
                 alt={listedProduct.name}
               />
             </div>
             <div className="w-100 w-80-l f3 pl4">
               <p>{listedProduct.description}</p>
-              <h2>Pris: {listedProduct.price}</h2>
+              <h4
+              className="pl4">{listedProduct.price}</h4>
             </div>
           </div>
         );
@@ -88,7 +92,7 @@ class Product extends React.Component {
         </div>
         <div
           className="mb4 list-container w-100 w-80-ns center"
-          style={{ overflowY: "scroll", height: "400px" }}
+          style={{ overflowY: "scroll", height: "800px" }}
         >
           <ReactCSSTransitionGroup
             transitionName="ListTransition"
