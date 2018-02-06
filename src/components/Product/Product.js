@@ -7,9 +7,6 @@ import Paella from "./Paella";
 import Ostar from "./Ostar";
 import "./Product.css";
 
-
-
-
 // List of all products
 const allProducts = {
   Skinkor,
@@ -77,8 +74,7 @@ class Product extends React.Component {
             </div>
             <div className="w-100 w-80-l f3 pl4">
               <p>{listedProduct.description}</p>
-              <h4
-              className="pl4">{listedProduct.price}</h4>
+              <h4 className="pl4">{listedProduct.price}</h4>
             </div>
           </div>
         );
