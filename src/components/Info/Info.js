@@ -1,16 +1,16 @@
 import React from "react";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import "./Info.css";
+import InfoCard from "../InfoCard/InfoCard";
 
-const Info = ({ onRouteChange }) => {
-  return <div style={{ marginBottom: "150px" }} className="br3 ba dark-gray b--black-10 shadow-5 center tc w-80-m w-60">
-      <h1>Info</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ipsa,
-        quaerat ex laudantium pariatur libero veritatis dolorum, neque, iste
-        sint a? Corporis cum perferendis quos ab vel aut doloribus accusamus.
-      </p>
-    </div>;
-};
+const Info = () => (
+  <InfoCard>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ipsa, quaerat
+      ex laudantium pariatur libero veritatis dolorum, neque, iste sint a?
+      Corporis cum perferendis quos ab vel aut doloribus accusamus.
+    </p>
+  </InfoCard>
+);
 
 export default Info;
