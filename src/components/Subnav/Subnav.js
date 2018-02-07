@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import Scroll from "../Scroll/Scroll";
 import ProductList from "../ProductList/ProductList";
+import "./Subnav.css";
 export default class Subnav extends Component {
   constructor(props) {
     super(props);
@@ -32,6 +33,7 @@ export default class Subnav extends Component {
         );
       }
     );
+
     return (
       <div>
         <div className="flex flex-wrap product-nav br3 pa2 ba dark-gray b--black-10 mt2 mb4 w-80 w-80-m w-50-1 shadow-5 center">
