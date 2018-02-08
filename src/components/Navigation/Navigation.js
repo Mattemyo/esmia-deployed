@@ -19,7 +19,7 @@ const Navigation = ({ onRouteChange }) => {
         onClick={() => onRouteChange("info")}
         className="f3 link dim black underline pa3 pointer"
       >
-        Om oss
+        Om
       </p>
       <p
         className="relative"

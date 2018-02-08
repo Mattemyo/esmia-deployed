@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import Scroll from "../Scroll/Scroll";
 import ProductList from "../ProductList/ProductList";
 import "./Subnav.css";
@@ -39,18 +38,15 @@ export default class Subnav extends Component {
         <div className="flex flex-wrap product-nav br3 pa2 ba dark-gray b--black-10 mt2 mb4 w-80 w-80-m w-50-1 shadow-5 center">
           {buttons}
         </div>
-        <ReactCSSTransitionGroup
-          transitionName="ListTransition"
-          transitionEnterTimeout={200}
-          transitionLeaveTimeout={200}
-        >
-          <Scroll>
+
+        <Scroll>
+          
             <ProductList
               onListChange={() => onListChange}
               activeList={activeList}
             />
-          </Scroll>
-        </ReactCSSTransitionGroup>
+         
+        </Scroll>
       </div>
     );
   }

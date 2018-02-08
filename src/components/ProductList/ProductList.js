@@ -5,13 +5,12 @@ import Chorizos from "./Chorizos";
 import Kolonial from "./Kolonial";
 import Paella from "./Paella";
 import Ostar from "./Ostar";
-
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 export default class ProductList extends Component {
   constructor(props) {
     super(props);
   }
-
 
   render() {
     // List of all products
@@ -21,12 +20,21 @@ export default class ProductList extends Component {
     // Rendered list depends on the  list that is active
     const products = allProducts[this.props.activeList].map(product => (
       <ListedProduct
+        key={product.name}
         name={product.name}
         price={product.price}
         img={product.img}
         description={product.description}
       />
     ));
-    return <div>{products}</div>;
+    return (
+      <ReactCSSTransitionGroup
+        transitionName="ListTransition"
+        transitionEnterTimeout={200}
+        transitionLeaveTimeout={200}
+      >
+        {products}
+      </ReactCSSTransitionGroup>
+    );
   }
 }

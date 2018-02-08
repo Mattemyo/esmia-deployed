@@ -3,6 +3,7 @@ import "./Contact.css";
 import InfoCard from "../InfoCard/InfoCard";
 
 const Contact = ({ onRouteChange }) => (
+  <div className="w-90 w-30-l center">
   <InfoCard>
     <div className="tc">
       <h1>Kontakt</h1>
@@ -12,6 +13,7 @@ const Contact = ({ onRouteChange }) => (
       <p>Öppettider: 08-7305081</p>
     </div>
   </InfoCard>
+  </div>
 );
 
 export default Contact;

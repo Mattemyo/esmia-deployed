@@ -2,7 +2,7 @@ import React from "react";
 
 const Welcome = () => {
   return (
-    <div className="br3 ba mt2 dark-gray b--black-10 w-100-m w-80 shadow-5 center">
+    <div className="br3 ba mt2 mb4 dark-gray b--black-10 w-100-m w-80 shadow-5 center">
       <h1 className="tc">Välkommen till Esmia!</h1>
       <p className="pa3 tl">
         Vi säljer spanska delikatesser. Efter 20 år i branschen kan vi bekräfta

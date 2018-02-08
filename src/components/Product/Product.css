@@ -6,24 +6,7 @@ h3 {
   background: rgba(0, 0, 0, 0.2);
 }
 
-/* Product List */
-.ListTransition-enter {
-  opacity: 0.01;
-}
 
-.ListTransition-enter.ListTransition-enter-active {
-  opacity: 1;
-  transition: all 0.2s ease;
-}
-
-.ListTransition-leave {
-  opacity: 1;
-}
-
-.ListTransition-leave.ListTransition-leave-active {
-  opacity: 0.01;
-  transition: all 0.2s ease;
-}
 
 /* Scrollbar */
 .list-container::-webkit-scrollbar {
