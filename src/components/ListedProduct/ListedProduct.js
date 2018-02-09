@@ -7,7 +7,7 @@ export default class ListedProduct extends Component {
     return (
       <div
         key={name}
-        className="pa3 mv4 flex flex-wrap br3 ba dark-gray b--black-10 shadow-5 center"
+        className="shadow-1 pa3 mv4 flex flex-wrap br3 ba dark-gray b--black-10 shadow-5 center"
       >
         <div className="w-100 w-20-l">
           <h2 className="tc">{name}</h2>

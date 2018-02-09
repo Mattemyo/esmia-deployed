@@ -52,7 +52,7 @@ const Navigation = ({ onRouteChange }) => {
         <li
           className="relative"
           onClick={() => onRouteChange("contact")}
-          className="f3 link dim black underline ph3 pv0 pointer"
+          className="mr3 f3 link dim black underline ph3 pv0 pointer"
         >
           Kontakt
         </li>

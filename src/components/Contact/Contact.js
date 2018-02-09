@@ -8,9 +8,9 @@ const Contact = ({ onRouteChange }) => (
     <div className="tc">
       <h1>Kontakt</h1>
       <p>Email: norberto@esmia.se</p>
-      <p>Telefon: 070-1178451</p>
+      <p>Telefon: 070-7223191</p>
       <p>Gustafsvägen 1, Solna</p>
-      <p>Öppettider: 08-7305081</p>
+      <p>Öppettider: 8.00-18.00</p>
     </div>
   </InfoCard>
   </div>

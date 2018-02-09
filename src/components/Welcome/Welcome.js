@@ -3,7 +3,7 @@ import infoCard from "../InfoCard/InfoCard";
 
 const Welcome = () => {
   return (
-    <div className="w-90 w-80-l center pl4">
+    <div className="w-90 w-80-l center mb3">
       <h1 className="tc pl3">Välkommen till Esmia!</h1>
       <p className="pa3 tl">
         Vi säljer spanska delikatesser. Efter 20 år i branschen kan vi bekräfta
