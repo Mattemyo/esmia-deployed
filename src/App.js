@@ -5,7 +5,7 @@ import React, { Component } from "react";
 import Particles from "react-particles-js";
 import Welcome from "./components/Welcome/Welcome";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
-import Slideshow from "./components/Slideshow/Slideshow";
+// import Slideshow from "./components/Slideshow/Slideshow";
 import Navigation from "./components/Navigation/Navigation";
 import Contact from "./components/Contact/Contact";
 import Info from "./components/Info/Info";
@@ -55,16 +55,16 @@ class App extends Component {
       switch (route) {
         case "landing":
           return <Product key={route} />;
-          break;
+          // break;
         case "product":
           return <Product key="product" onRouteChange={this.onRouteChange} />;
-          break;
+          // break;
         case "info":
           return <Info key={route} onRouteChange={this.onRouteChange} />;
-          break;
+          // break;
         case "contact":
           return <Contact key={route} onRouteChange={this.onRouteChange} />;
-          break;
+          // break;
         default:
           break;
       }

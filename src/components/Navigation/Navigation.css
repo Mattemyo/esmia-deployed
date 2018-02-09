@@ -1,4 +1,10 @@
 nav {
   list-style: none;
 }
+h1 {
+  display: inline-block;
+}
 
+h1.hidden {
+  opacity: 0;
+}
