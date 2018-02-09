@@ -16,11 +16,11 @@ const Paella = [
   },
 
   {
-    name: "Chorizo och Salami Iberico",
+    name: "Skaldjurspaella",
     img: mariscoPaella,
     price: "175kr/kg",
     description:
-      "Chorizo och Salchichon (salame) Iberico charkuteri. Mycket smak och doft av svart den svarta grisrasen Iberico. Serveras kallskuret på fat med paprika, oliver mm. Förpackning: 1,2kg st. 6 st/kolli = 8kg"
+      "Paella gjord på skaldjur"
   },
   {
     name: "Tilltugg - Spansk Tortilla",

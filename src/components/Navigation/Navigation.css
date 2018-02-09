@@ -5,6 +5,11 @@ h1 {
   display: inline-block;
 }
 
+h1,
+img.shadow-5 {
+  cursor: pointer;
+}
+
 h1.hidden {
   opacity: 0;
 }

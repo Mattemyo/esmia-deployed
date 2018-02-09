@@ -1,6 +1,7 @@
 import tapasJamon from "./images/tapasJamon.jpg";
 import tjockskinka from "./images/tjockskinka.jpg";
-
+import redondoIglesias from "./images/redondoIglesias.jpg";
+import ibericoSkivad from "./images/ibericoSkivad.jpg";
 const Skinkor = [
   {
     name: "Iberico ben, 30 mån",
@@ -35,7 +36,14 @@ const Skinkor = [
     img: tjockskinka,
     price: "235kr/kg",
     description:
-      "Serranoskinka skivad 500gr. Lätt att dra varje skiva med mellanlägg. Skinkan från grishona med 11 månaders lufttorkning. Linda den med dadlar, runt gettjockskinka, servera med oliver. Förpackning: 5 st x 500g = 2,5kg/kolli."
+      "Serranoskinka skivad 500g. Lätt att dra varje skiva med mellanlägg. Skinkan från grishona med 11 månaders lufttorkning. Linda den med dadlar, runt gettjockskinka, servera med oliver. Förpackning: 5 st x 500g = 2,5kg/kolli."
+  },
+  {
+    name: "Redondo Iglesias 500g skivad",
+    img: redondoIglesias,
+    price: "235kr/kg",
+    description:
+      "Serranoskinka skivad 500g. Lätt att dra varje skiva med mellanlägg. Skinkan från grishona med 11 månaders lufttorkning. Linda den med dadlar, runt gettjockskinka, servera med oliver. Förpackning: 5 st x 500g = 2,5kg/kolli."
   }
 ];
 

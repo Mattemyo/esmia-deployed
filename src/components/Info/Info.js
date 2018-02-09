@@ -3,7 +3,7 @@ import "./Info.css";
 import InfoCard from "../InfoCard/InfoCard";
 
 const Info = () => (
-  <div className="w-90 center">
+  <div className="w-90 w-80-l center">
     <InfoCard>
       <p className="pa4">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ipsa,
