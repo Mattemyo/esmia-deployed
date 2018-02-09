@@ -19,7 +19,7 @@ const headerStyle = {};
 const Navigation = ({ onRouteChange }) => {
   return (
     <div>
-      <header style={headerStyle} className=" pl5 pt2 center w-80-l h-20 mb0">
+      <header style={headerStyle} className="pt2 pl3 center w-80 h-20 mb0">
         <img
           onClick={() => onRouteChange("product")}
           style={imgStyle}
