@@ -10,7 +10,7 @@ h3 {
 
 /* Scrollbar */
 .list-container::-webkit-scrollbar {
-  width: 4em;
+  width: 2em;
   margin-bottom: 40px;
 }
 .list-container::-webkit-scrollbar-track {

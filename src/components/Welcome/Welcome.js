@@ -6,17 +6,16 @@ const Welcome = () => {
     <div className="w-90 w-80-l center mb3">
       <h1 className="tc pl3">Välkommen till Esmia!</h1>
       <p className="pa3 tl">
-        Vi säljer spanska delikatesser. Efter 20 år i branschen kan vi bekräfta
-        att det är kvalitet som säljer!
+        Hos oss säljs spanska delikatesser. Efter 20 år i branschen kan vi
+        bekräfta att det är kvalitet som säljer!
       </p>
       <p className="pa3 tl">
-        Vårt lager består av kylvaror, såsom ibericoskinka, serranoskinka,
-        chorizo, lagrad manchego, färsk getost, sherryvinäger, olivolja,
-        pimentos piquillo, marconamandlar med mera.
+        Vi fixar paellor till events, födelsedagar, studentmottagningar och även
+        det du som kund kan tänka dig.
       </p>
       <p className="pa3 tl">
-        Våra priser sätts med låg marginal i förhållande till importpriset.
-        Nedan hittar ni våra produkter.
+        Utöver detta säljer vi importerade produkter från Spanien, såsom ost,
+        skinka och olivolja.
       </p>
       <hr
         style={{

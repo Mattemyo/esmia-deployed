@@ -8,7 +8,7 @@ const Kolonial = [
       "Ibericoskinka är lufttorkad i 30 månader. Gris av svart ras. Den avlas i naturen med ekollon och andra örter. 6 månader innan slakt utfodras grisarna med vanligt foder. 7,5kg /st."
   },
   {
-    name: "Olivolja",
+    name: "Piquillo Paprika",
     img:
       "https://thumbs.dreamstime.com/b/spansk-olivolja-32647959.jpg",
     price: "450kr/kg",

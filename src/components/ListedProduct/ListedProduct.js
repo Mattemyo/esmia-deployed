@@ -14,8 +14,8 @@ export default class ListedProduct extends Component {
           <img className="center br3" src={img} alt={name} />
         </div>
         <div className="w-100 w-80-l f3 pl4">
-          <p>{description}</p>
-          <h4 className="pl4">{price}</h4>
+          <p className="f4">{description}</p>
+          <h4 className="pl4 f4">{price}</h4>
         </div>
       </div>
     );

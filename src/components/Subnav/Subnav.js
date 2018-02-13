@@ -25,7 +25,7 @@ export default class Subnav extends Component {
           <p
             style={activeStyle}
             onClick={() => onListChange(productType)}
-            className="f2 mv1 ph2 center tc w-40-m w-15 link dim black pa1 pointer ba b--black-10 br2 shadow-5"
+            className="f4 mv1 ph2 center tc w-40-m w-15 link dim black pa1 pointer ba b--black-10 br2 shadow-5"
           >
             {productType}
           </p>
